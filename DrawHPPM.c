@@ -60,7 +60,7 @@ main()
 
     /* ヘッダ情報を出力 */
     /* ③fputsの ?? をPPM画像のファイル識別子に置き換える */
-    fputs("P6\n", fp);  /* P3に変更した,P6に変更した */
+    fputs("P6\n", fp);
     /* # で始まるコメント行（省略可能） */
     fputs("# Created by ImgProc\n", fp);
     /* 画像の横幅，縦幅の出力 */
@@ -75,7 +75,7 @@ main()
             /* ④RGBの値を出力するforループ（制御変数k），fputc()を使ってpimage_out[k][y][x]を出力する */
             /* pgmppmio.hにある関数 save_image_ppm() の画像データ出力のコードを参照 */
             for (k = 0; k < 3; k++) {
-                fputc(pimage_out[k][y][x], fp);/* pgmppmio.hから */
+                fputc(pimage_out[k][y][x], fp);
             }
         }
     }
